@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  MovingAverage
-//
-//  Created by 張竣傑 on 2022/6/22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovingAverage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-ft-x41" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="10" y="224" width="394" height="388"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pWq-w6-95F">
+                                <rect key="frame" x="56" y="184" width="117" height="32"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <segments>
+                                    <segment title="本益比"/>
+                                    <segment title="本淨比"/>
+                                </segments>
+                                <connections>
+                                    <action selector="本益比本淨比切換:" destination="BYZ-38-t0r" eventType="valueChanged" id="h9o-hM-a6v"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XvF-Sx-yLy">
+                                <rect key="frame" x="231" y="184" width="131" height="32"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="一年"/>
+                                    <segment title="三年"/>
+                                    <segment title="五年"/>
+                                </segments>
+                                <connections>
+                                    <action selector="時間選擇:" destination="BYZ-38-t0r" eventType="valueChanged" id="yWq-qP-kYD"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="lxl-ft-x41" firstAttribute="top" secondItem="XvF-Sx-yLy" secondAttribute="bottom" constant="9" id="Ab0-sE-AeS"/>
+                            <constraint firstItem="pWq-w6-95F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-92.5" id="GX0-tJ-7De"/>
+                            <constraint firstItem="lxl-ft-x41" firstAttribute="top" secondItem="pWq-w6-95F" secondAttribute="bottom" constant="9" id="QUr-bz-aRn"/>
+                            <constraint firstItem="XvF-Sx-yLy" firstAttribute="leading" secondItem="pWq-w6-95F" secondAttribute="trailing" constant="58" id="g2c-2G-RT5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XvF-Sx-yLy" secondAttribute="trailing" constant="52" id="hTn-Gr-235"/>
+                            <constraint firstItem="pWq-w6-95F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="iA9-hn-Lk4"/>
+                            <constraint firstItem="XvF-Sx-yLy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="rXM-fN-VhT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lxl-ft-x41" secondAttribute="bottom" constant="250" id="vmJ-Ab-e8A"/>
+                            <constraint firstItem="lxl-ft-x41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yo8-us-ilk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lxl-ft-x41" secondAttribute="trailing" constant="10" id="zHr-32-LbZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="lxl-ft-x41" id="PU3-Ut-ODr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.521739130434788" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

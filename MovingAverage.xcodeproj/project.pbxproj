@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7860A04728671C9100D1AD6D /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 7860A04628671C9100D1AD6D /* JGProgressHUD */; };
 		78CDF72C2862B83F00892D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF72B2862B83F00892D41 /* AppDelegate.swift */; };
 		78CDF72E2862B83F00892D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF72D2862B83F00892D41 /* SceneDelegate.swift */; };
 		78CDF7302862B83F00892D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF72F2862B83F00892D41 /* ViewController.swift */; };
 		78CDF7332862B83F00892D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CDF7312862B83F00892D41 /* Main.storyboard */; };
 		78CDF7352862B84000892D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CDF7342862B84000892D41 /* Assets.xcassets */; };
 		78CDF7382862B84000892D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CDF7362862B84000892D41 /* LaunchScreen.storyboard */; };
+		78CDF7432862B8EC00892D41 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF7422862B8EC00892D41 /* APICaller.swift */; };
+		78CDF7452862B98F00892D41 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF7442862B98F00892D41 /* APIModel.swift */; };
+		78CDF7482862CE8300892D41 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 78CDF7472862CE8300892D41 /* Charts */; };
+		78CDF74B2862CEEE00892D41 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF74A2862CEEE00892D41 /* UIView+Extension.swift */; };
+		78CDF74D2862DF8600892D41 /* MovingAverageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF74C2862DF8600892D41 /* MovingAverageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		78CDF7342862B84000892D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78CDF7372862B84000892D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78CDF7392862B84000892D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78CDF7422862B8EC00892D41 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		78CDF7442862B98F00892D41 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		78CDF74A2862CEEE00892D41 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		78CDF74C2862DF8600892D41 /* MovingAverageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingAverageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7860A04728671C9100D1AD6D /* JGProgressHUD in Frameworks */,
+				78CDF7482862CE8300892D41 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,51 @@
 		78CDF72A2862B83F00892D41 /* MovingAverage */ = {
 			isa = PBXGroup;
 			children = (
-				78CDF72B2862B83F00892D41 /* AppDelegate.swift */,
-				78CDF72D2862B83F00892D41 /* SceneDelegate.swift */,
-				78CDF72F2862B83F00892D41 /* ViewController.swift */,
+				78CDF73F2862B89700892D41 /* Resources */,
+				78CDF7492862CED700892D41 /* Extensions */,
+				78CDF7402862B89C00892D41 /* Models */,
+				78CDF7412862B8C200892D41 /* Views */,
 				78CDF7312862B83F00892D41 /* Main.storyboard */,
 				78CDF7342862B84000892D41 /* Assets.xcassets */,
 				78CDF7362862B84000892D41 /* LaunchScreen.storyboard */,
 				78CDF7392862B84000892D41 /* Info.plist */,
 			);
 			path = MovingAverage;
+			sourceTree = "<group>";
+		};
+		78CDF73F2862B89700892D41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78CDF72B2862B83F00892D41 /* AppDelegate.swift */,
+				78CDF72D2862B83F00892D41 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		78CDF7402862B89C00892D41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78CDF7422862B8EC00892D41 /* APICaller.swift */,
+				78CDF7442862B98F00892D41 /* APIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78CDF7412862B8C200892D41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78CDF72F2862B83F00892D41 /* ViewController.swift */,
+				78CDF74C2862DF8600892D41 /* MovingAverageViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78CDF7492862CED700892D41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78CDF74A2862CEEE00892D41 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +131,10 @@
 			dependencies = (
 			);
 			name = MovingAverage;
+			packageProductDependencies = (
+				78CDF7472862CE8300892D41 /* Charts */,
+				7860A04628671C9100D1AD6D /* JGProgressHUD */,
+			);
 			productName = MovingAverage;
 			productReference = 78CDF7282862B83F00892D41 /* MovingAverage.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,10 @@
 				Base,
 			);
 			mainGroup = 78CDF71F2862B83F00892D41;
+			packageReferences = (
+				78CDF7462862CE8300892D41 /* XCRemoteSwiftPackageReference "Charts" */,
+				7860A04528671C9100D1AD6D /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = 78CDF7292862B83F00892D41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CDF74B2862CEEE00892D41 /* UIView+Extension.swift in Sources */,
+				78CDF74D2862DF8600892D41 /* MovingAverageViewModel.swift in Sources */,
 				78CDF7302862B83F00892D41 /* ViewController.swift in Sources */,
 				78CDF72C2862B83F00892D41 /* AppDelegate.swift in Sources */,
+				78CDF7432862B8EC00892D41 /* APICaller.swift in Sources */,
 				78CDF72E2862B83F00892D41 /* SceneDelegate.swift in Sources */,
+				78CDF7452862B98F00892D41 /* APIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +418,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7860A04528671C9100D1AD6D /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		78CDF7462862CE8300892D41 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7860A04628671C9100D1AD6D /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7860A04528671C9100D1AD6D /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+		78CDF7472862CE8300892D41 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78CDF7462862CE8300892D41 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78CDF7202862B83F00892D41 /* Project object */;
 }
