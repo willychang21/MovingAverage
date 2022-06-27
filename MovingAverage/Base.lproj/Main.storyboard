@@ -40,7 +40,7 @@
                                     <segment title="五年"/>
                                 </segments>
                                 <connections>
-                                    <action selector="時間選擇:" destination="BYZ-38-t0r" eventType="valueChanged" id="yWq-qP-kYD"/>
+                                    <action selector="時間切換:" destination="BYZ-38-t0r" eventType="valueChanged" id="cof-m5-n4f"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>

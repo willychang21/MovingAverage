@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7860A04728671C9100D1AD6D /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 7860A04628671C9100D1AD6D /* JGProgressHUD */; };
+		7876292628688BA80031CD05 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876292528688BA80031CD05 /* String+Extension.swift */; };
 		78CDF72C2862B83F00892D41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF72B2862B83F00892D41 /* AppDelegate.swift */; };
 		78CDF72E2862B83F00892D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF72D2862B83F00892D41 /* SceneDelegate.swift */; };
 		78CDF7302862B83F00892D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF72F2862B83F00892D41 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7876292528688BA80031CD05 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		78CDF7282862B83F00892D41 /* MovingAverage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingAverage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CDF72B2862B83F00892D41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78CDF72D2862B83F00892D41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				78CDF74A2862CEEE00892D41 /* UIView+Extension.swift */,
+				7876292528688BA80031CD05 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7876292628688BA80031CD05 /* String+Extension.swift in Sources */,
 				78CDF74B2862CEEE00892D41 /* UIView+Extension.swift in Sources */,
 				78CDF74D2862DF8600892D41 /* MovingAverageViewModel.swift in Sources */,
 				78CDF7302862B83F00892D41 /* ViewController.swift in Sources */,

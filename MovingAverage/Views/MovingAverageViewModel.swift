@@ -1,17 +1,17 @@
 import Foundation
 import Charts
 
-class MovingAverageViewModel {
+struct MovingAverageViewModel {
     let 年月: String
-    let 月平均收盤價,
-        近四季EPS,
-        近一季BPS: Double
+    let 月平均收盤價: Double
+    let 本益比股價基準,
+        本淨比股價基準: [String]
     
-    init(年月: String, 月平均收盤價: Double, 近四季EPS: Double, 近一季BPS: Double) {
+    init(年月: String, 月平均收盤價: Double, 本益比股價基準: [String], 本淨比股價基準: [String]) {
         self.年月 = 年月
         self.月平均收盤價 = 月平均收盤價
-        self.近四季EPS = 近四季EPS
-        self.近一季BPS = 近一季BPS
+        self.本益比股價基準 = 本益比股價基準
+        self.本淨比股價基準 = 本淨比股價基準
     }
 }
 
